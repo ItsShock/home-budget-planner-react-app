@@ -30,8 +30,9 @@ const AddIncomesForm = () => {
                     required='required'
                     type='text'
                     className='form-control'
-                    id='nameIncome'>
+                    id='nameIncome'
                     onChange={(e) => setNameIncome(e.target.value)}
+                    >
                 </input>
             </div>
             <div>

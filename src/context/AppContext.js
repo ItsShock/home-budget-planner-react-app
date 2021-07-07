@@ -12,6 +12,20 @@ const AppReducer = (state, action) => {
                 ...state,
                 incomes: [...state.incomes, action.payload],
             }
+        case 'DELETE_EXPENSE':
+            return {
+                ...state,
+                expenses: state.expenses.filter((expense) => expense.id !== action.payload)
+            }
+        case 'DELETE_INCOME':
+            return {
+                ...state,
+                incomes: state.incomes.filter((incomes) => incomes.id !== action.payload)
+            }
+        case 'EDIT_EXPENSE':
+            return {
+                
+            }
         default:
             return state;
     }

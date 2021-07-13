@@ -23,8 +23,13 @@ const AppReducer = (state, action) => {
                 incomes: state.incomes.filter((incomes) => incomes.id !== action.payload)
             }
         case 'EDIT_EXPENSE':
+            const expenseIndexToEdit = 
+            state.expenses.findIndex((expense) => expense.id === action.payload.id);
+            const editedExpenses = /* kopiowanie state.expenses i zastąpienie w kopii edytowanego elementu expense */
+                [...state.expenses].splice(expenseIndexToEdit, 1, action.payload.expenseToEdit);
             return {
-                
+                ...state,
+                expenses: editedExpenses
             }
         default:
             return state;

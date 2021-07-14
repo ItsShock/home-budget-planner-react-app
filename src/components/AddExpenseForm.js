@@ -25,7 +25,7 @@ const AddExpenseForm = () => {
     return (
         <form onSubmit={onSubmit} className='d-flex flex-row justify-content-around align-items-end'>
             <div>
-                <label for='name'>Name</label>
+                <label htmlFor='name'>Name</label>
                 <input
                     required='required'
                     type='text'
@@ -35,7 +35,7 @@ const AddExpenseForm = () => {
                 </input>
             </div>
             <div>
-                <label for='costExpense'>Cost</label>
+                <label htmlFor='costExpense'>Cost</label>
                 <input
                     required='required'
                     type='number'

@@ -18,15 +18,24 @@ const ExpenseItem = (props) => {
     const handleEditExpense = () => {
         dispatch({
             type: 'EDIT_EXPENSE',
-            payload:
-                props.id,
+            payload: {
+                id: props.id,
                 expenseToEdit: {name: "sss", cost: 40},
+            }
                     
         })
     }
 
+    const EditName = () => {
+        console.log(props.name)
+    }
+
+    const EditCost = () => {
+        console.log(props.cost)
+    }
+
     return (
-        <div>
+        
         <li className='list-group-item d-flex justify-content-between align-items-center mt-4 me-4'>
             {props.name}
             <div>
@@ -36,14 +45,13 @@ const ExpenseItem = (props) => {
                 <TiPencil className='me-2' size='1.5em' onClick={handleEditExpense}></TiPencil>
                 <TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete>
             </div>
+            <input type="text" onChange={EditName} value={props.name} />
+            <input type="number" onChange={EditCost} value={props.cost} />
+        
         </li>
-        <div>
-            {props.name}
-            <span className='badge bg-primary badge-pill me-4'>
-                ${props.cost}
-            </span>
-        </div>
-        </div>
+        
+        
+        
     )
 };
 

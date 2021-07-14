@@ -10,7 +10,7 @@ const ExpeneseList = () => {
     return (
         <ul>
             {expenses.map((expense) => (
-            < ExpenseItem
+            < ExpenseItem key={expense}
                 id={expense.id}
                 name={expense.name}
                 cost={expense.cost} />

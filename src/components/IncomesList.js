@@ -8,7 +8,7 @@ const IncomesList = () => {
     return (
         <ul>
             {incomes.map((income) => (
-            < IncomesItem
+            < IncomesItem key={income}
                 id={income.id}
                 name={income.name}
                 cost={income.cost} />

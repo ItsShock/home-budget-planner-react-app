@@ -25,7 +25,7 @@ const AddIncomesForm = () => {
     return (
         <form onSubmit={onSubmit} className='d-flex flex-row justify-content-around align-items-end'>
             <div>
-                <label for='name'>Name</label>
+                <label htmlFor='name'>Name</label>
                 <input
                     required='required'
                     type='text'
@@ -36,7 +36,7 @@ const AddIncomesForm = () => {
                 </input>
             </div>
             <div>
-                <label for='costIncome'>Cost</label>
+                <label htmlFor='costIncome'>Cost</label>
                 <input
                     required='required'
                     type='number'
